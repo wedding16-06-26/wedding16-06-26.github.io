@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение | Ксения & Евгений</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-ivory: #f9f7f2;
+            --text-dark: #3e4236;
+            --accent-green: #5d634f;
+            --font-main: 'Cormorant Infant', serif;
+            --font-secondary: 'Montserrat', sans-serif;
+	    --font-secondary2: 'Cormorant Infant', serif;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-ivory);
+            color: var(--text-dark);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .sun-divider {
+            display: block;
+            width: 180px;
+            height: 180px;
+            margin: 15px auto;
+            background-image: url("ветка.png"); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.8;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-main);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 40px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .hero h1 { 
+            font-size: 3.5rem; 
+            margin: 20px 0; 
+            line-height: 1.1;
+        }
+        
+        .hero-date { 
+            font-size: 2.2rem; 
+            color: var(--accent-green); 
+            font-weight: 200;
+        }
+
+        /* Стили календаря */
+        .calendar {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .calendar-title {
+            display: block;
+            font-family: var(--font-secondary2);
+            font-weight: 1000;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .cal-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            font-family: var(--font-secondary2); /* Устанавливаем Montserrat для всей сетки */
+            font-size: 1.0rem;
+        }
+
+        .day-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--accent-green);
+            padding-bottom: 5px;
+        }
+
+        .day-circle {
+            border: 1px solid var(--accent-green);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-weight: 600;
+        }
+
+        /* Тайминг */
+        .timing-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .timing-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .timing-icon { font-size: 1.4rem; }
+        
+        .timing-arrow {
+            font-size: 1.5rem;
+	    line-height: 1.0;
+            opacity: 0.4;
+        }
+
+        /* Палитра */
+        .palette {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 15px 0;
+        }
+        
+        .dot {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* Анимации */
+        .animate { opacity: 0; transform: translateY(20px); transition: 1s ease-out; }
+        .visible { opacity: 1; transform: translateY(0); }
+        
+        /* Вспомогательные классы для текста */
+        .elegant-text { 
+            font-family: var(--font-secondary);
+            font-weight: 300;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            margin: 10px 0;
+        } 
+        
+        .elegant-text-small { 
+            font-family: var(--font-secondary);
+            font-weight: 300;
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin-top: 15px;
+        } 
+
+        a.map-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-green);
+            font-family: var(--font-secondary);
+            font-weight: 400;
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-green);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Ксения<br>&<br>Евгений</h1>
+        <div class="hero-date">16.06.2026</div>
+    </section>
+    
+    <div class="section animate">
+        <div class="sun-divider"></div>
+    </div>
+    
+    <section class="section animate">
+        <h2>Приглашение</h2>
+        <div class="elegant-text">
+            Мы будем рады видеть вас на нашей свадьбе! Приглашаем провести этот особенный вечер в кругу близких людей и разделить с нами тепло нашего счастья.
+        </div>
+        
+        <div class="calendar">
+            <span class="calendar-title">ИЮНЬ 2026</span>
+            <div class="cal-grid">
+                <div class="day-name">Пн</div><div class="day-name">Вт</div><div class="day-name">Ср</div>
+                <div class="day-name">Чт</div><div class="day-name">Пт</div><div class="day-name">Сб</div><div class="day-name">Вс</div>
+                
+                <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
+                <div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div>
+                <div>15</div><div class="day-circle">16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div>
+                <div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div>
+                <div>29</div><div>30</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section animate">
+        <h2>Место проведения</h2>
+        <div id="map" style="width: 100%; height: 300px; border-radius: 8px; margin-bottom: 20px;"></div>
+        <div class="elegant-text">
+            Москва, Музей-заповедник Коломенское,<br>проспект Андропова, 39
+        </div>
+        <a href="https://yandex.ru/maps/-/CCUof-h9~A" target="_blank" class="map-link">Как добраться →</a>
+    </section>
+
+    <section class="section animate">
+        <h2>Свадебный день</h2>
+        <div class="timing-container">
+            <div class="timing-item">
+                <span class="timing-icon">👫</span>
+                <span class="elegant-text">16:00 — Сбор гостей</span>
+            </div>
+            <div class="timing-arrow">↓</div>
+            <div class="timing-item">
+                <span class="timing-icon">🥂</span>
+                <span class="elegant-text">17:00 — Начало банкета</span>
+            </div>
+            <div class="timing-arrow">↓</div>
+            <div class="timing-item">
+                <span class="timing-icon">✨</span>
+                <span class="elegant-text">22:30 — Завершение вечера</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section animate">
+        <h2>Дресс-код</h2>
+        <div class="elegant-text">Нам будет приятно, если вы поддержите нас нарядами в следующих оттенках:</div>
+        
+        <div class="palette">
+            <div class="dot" style="background: #D7C0AE;" title="Светло-коричневый"></div>
+            <div class="dot" style="background: #D9B5B5;" title="Светло-бордовый"></div>
+	    <div class="dot" style="background: #C1C9AF;" title="Светло-оливковый"></div>
+            <div class="dot" style="background: #CEC2D1;" title="Лиловый"></div>
+	    <div class="dot" style="background: #B9D1DC;" title="Голубой"></div>
+        </div>
+        
+        <div class="palette">
+            <div class="dot" style="background: #4B3621;" title="Темно-коричневый"></div>
+            <div class="dot" style="background: #804747;" title="Бордовый"></div>
+	    <div class="dot" style="background: #6B705C;" title="Оливковый"></div>
+            <div class="dot" style="background: #5E5473;" title="Фиолетовый"></div>
+	    <div class="dot" style="background: #4E5E7E;" title="Синий"></div>
+        </div>
+        <div class="elegant-text-small">*Будем признательны, если вы откажетесь от чисто черного и чисто белого цветов</div>
+    </section>
+
+    <section class="section animate">
+        <h2>Пожелания</h2>
+        <div class="elegant-text">
+            Наилучший подарок для нас — это ваше присутствие и добрые слова поздравления! А если все же захочется что-то подарить, просим не дарить цветы и материальные подарки.
+        </div>
+    </section>
+
+    <div class="sun-divider" style="margin-bottom: 30px;"></div>
+
+    <footer style="padding-bottom: 60px;">
+        <h3 style="font-family: 'Georgia', serif; font-size: 1.5rem; color: var(--accent-green); font-weight: normal; text-transform: none;">
+            С любовью,<br>Ксения 💕 Евгений
+        </h3>
+    </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ваш_API_ключ" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("map", {
+                center: [55.669866, 37.663189],
+                zoom: 15
+            });
+            var myPlacemark = new ymaps.Placemark([55.669866, 37.663189], {
+                hintContent: 'Музей-заповедник Коломенское',
+                balloonContent: 'проспект Андропова, 39'
+            });
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate').forEach(s => obs.observe(s));
+    </script>
+</body>
+</html>
